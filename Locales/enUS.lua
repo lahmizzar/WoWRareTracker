@@ -5,13 +5,88 @@ local L = LibStub("AceLocale-3.0"):NewLocale("WoWRareTracker", "enUS", true)
 L["string1"] = true
 
 --Config
+L["wow_rare_tracker"] = "WoW Rare Tracker"
+L["minimap_and_broker"] = "Minimap & Data Broker"
+L["show_minimap_icon_name"] = "Show Minimap Icon"
+L["show_minimap_icon_desc"] = "Shows Minimap Icon"
+L["show_broker_text_name"] = "Show Broker Text"
+L["show_broker_text_desc"] = "Shows Broker Text. (You only see the Icon when Disabled)"
+L["show_menu_name"] = "Show Menu"
+L["show_menu_desc"] = "Shows the Menu."
+L["on_mouseover"] = "On Mouse-Over"
+L["on_leftClick"] = "On Left-Click"
+L["unit_frames"] = "Unit Frames"
+L["npc_unit_frame_text_name"] = "NPC Unit Frame Text"
+L["npc_unit_frame_text_desc"] = "Adds  information to the  Rare's 'Mouse Over' Unit Frame Box"
+L["colorize_drops_collum"] = "Colorize 'Drops' Collum"
+L["colorize_known_items_name"] = "Colorize known items"
+L["colorize_known_items_desc"] = "Gives the item in the 'Drops' Collum a color is known and unknown"
+L["color_of_known_items_name"] = "Color of Known Items"
+L["color_of_known_items_desc"] = "Set the color of Known Items"
+L["color_of_unknown_items_name"] = "Color of Unknown Items"
+L["color_of_unknown_items_desc"] = "Set the color of Unknown Items"
+L["colorize_status_text"] = "Colorize Status Text"
+L["use_custom_colors_name"] = "Use custom colors"
+L["use_custom_colors_desc"] = "Use custom colors for the status text. When disabled it uses the default colors"
+L["color_of_available_name"] = "Color of 'available'"
+L["color_of_available_desc"] = "Set the color of the 'available' status"
+L["color_of_defeated_name"] = "Color of 'defeated'"
+L["color_of_defeated_desc"] = "Set the color of the 'defeated' status"
+L["tomtom_integration"] = "TomTom Integration (Requires TomTom)"
+L["tomtom_integration_name"] = "TomTom Integration"
+L["tomtom_integration_desc"] = "Create a TomTom Waypoint when Clicked on a Rare in the menu"
+L["tomtom_output_to_chat_name"] = "Output to Chat"
+L["tomtom_output_to_chat_desc"] = "Prints a message in your Chat window when a waypoint is created"
+L["reset_to_default_name"] = "Reset to Default"
+L["reset_to_default_desc"] = "Resets all settings to Default"
+L["reset_to_default_return"] = "Are you sure you want ot rest all settings to Default?"
+L["reset_to_default_print"] = "Settings reset to Default."
+
+-- Addon Menu
+L["wrt_table_1"] = "Rare"
+L["wrt_table_2"] = "Drop"
+L["wrt_table_3"] = "Status"
+L["wrt_unknown"] = "Unknown"
+L["wrt_defeated"] = "Defeated"
+L["wrt_available"] = "Available"
+L["wrt_mouse_option_left"] = "Left-Click to add TomTom Waypoint."
+L["wrt_mouse_option_right"] = "Right-Click to open Options."
+
+-- TomTom
+L["tomtom_added_waypoint_to"] = "WRT => Added waypoint to: "
+
+-- Tooltip
+L["wrt_tooltip_drop"] = "Drop"
 
 --Rares
-
---TomTom
-
---DataBroker
-
---Prints to Chat
-
---UnitFrames
+L["rare_dooms_howl"] = "Doom's Howl"
+L["rare_the_lions_roar"] = "The Lion's Roar"
+L["rare_cresting_goliath"] = "Cresting Goliath"
+L["rare_burning_goliath"] = "Burning Goliath"
+L["rare_rumbling_goliath"] = "Rumbling Goliath"
+L["rare_thundering_goliath"] = "Thundering Goliath"
+L["rare_beastrider_kama"] = "Beastrider Kama"
+L["rare_nimar_the_slayer"] = "Nimar the Slayer"
+L["rare_overseer_krix"] = "Overseer Krix"
+L["rare_skullripper"] = "Skullripper"
+L["rare_knight_captain_aldrin"] = "Knight-Captain Aldrin"
+L["rare_doomrider_helgrim"] = "Doomrider Helgrim"
+L["rare_branchlord_aldrus"] = "Branchlord Aldrus"
+L["rare_darbel_montrose"] = "Darbel Montrose"
+L["rare_echo_of_myzrael"] = "Echo of Myzrael"
+L["rare_fozruk"] = "Fozruk"
+L["rare_man_hunter_rog"] = "Man-Hunter Rog"
+L["rare_plaguefeather"] = "Plaguefeather"
+L["rare_ragebeak"] = "Ragebeak"
+L["rare_venomarus"] = "Venomarus"
+L["rare_yogursa"] = "Yogursa"
+L["rare_foulbelly"] = "Foulbelly"
+L["rare_geomancer_flintdagger"] = "Geomancer Flintdagger"
+L["rare_horrific_apparition"] = "Horrific Apparition"
+L["rare_korgresh_coldrage"] = "Kor'gresh Coldrage"
+L["rare_kovork"] = "Kovork"
+L["rare_molok_the_crusher"] = "Molok the Crusher"
+L["rare_ruul_onestone"] = "Ruul Onestone"
+L["rare_singer"] = "Singer"
+L["rare_zalas_witherbark"] = "Zalas Witherbark"
+L["rare_boulderfist_brute"] = "Boulderfist Brute"
