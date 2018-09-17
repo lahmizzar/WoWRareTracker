@@ -49,7 +49,7 @@ L["wrt_table_3"] = "Status"
 L["wrt_unknown"] = "Unknown"
 L["wrt_defeated"] = "Defeated"
 L["wrt_available"] = "Available"
-L["wrt_mouse_option_left"] = "Left-Click to add TomTom Waypoint."
+L["wrt_mouse_option_left"] = "Left-Click on a rare to add a TomTom Waypoint."
 L["wrt_mouse_option_right"] = "Right-Click to open Options."
 
 -- TomTom
