@@ -12,6 +12,8 @@ local _G = _G
 WoWRareTracker.WRT = {}
 local WRT = WoWRareTracker.WRT
 
+WRT.version = "0.2.1"
+
 WRT.rares = {
     [138122] = { name = L["rare_dooms_howl"], id = 138122, questId = { 53002 }, type = "WorldBoss", drop = "Toy", itemID = 163828, faction = "alliance", coord = 37093921, sort = 1, isKnown = false },
     [137374] = { name = L["rare_the_lions_roar"], id = 137374, questId = { 0 }, type = "WorldBoss", drop = "Toy", itemID = 163829, faction = "horde", coord = 30155960, sort = 2, isKnown = false }, -- Need Horde Quest ID
@@ -310,8 +312,6 @@ configOptions = {
     },
 }
 
-
-
 function WoWRareTracker:OnInitialize()
     WRT.broker = ldb:NewDataObject("WoWRareTracker", {
         type = "data source",
@@ -367,6 +367,7 @@ end
 function WoWRareTracker:PLAYER_ENTERING_WORLD()
     self:UnregisterEvent("PLAYER_ENTERING_WORLD")
     self:ScheduleTimer("DelayedInitialize", 5)
+	self:Print(format("Version: |cFFffaa00%s|r loaded!", WRT.version))
 end
 
 function WoWRareTracker:OnEvent(event, ...)
@@ -606,6 +607,10 @@ function WoWRareTracker:HideExtraTooltip()
     end
 end
 
+function WoWRareTracker:ZONE_CHANGED()
+    self:Print("This is a zone change notification!")
+end
+
 GameTooltip:HookScript("OnTooltipSetUnit", function(self)
     if WRT.db.profile.enableNPCUnitFrame then
         local name, unit = self:GetUnit()
@@ -626,11 +631,11 @@ GameTooltip:HookScript("OnTooltipSetUnit", function(self)
         local rare = WRT.rares[npcid]
         if rare and type(rare) == "table" and WoWRareTracker:IsNPCPlayerFaction(npcid) then
             GameTooltip:AddLine(" ")
-            GameTooltip:AddLine(WoWRareTracker:ColorText(L["wow_rare_tracker"]": ", WRT.colors.yellow) .. WoWRareTracker:GetStatusText(npcid))
+            GameTooltip:AddLine(WoWRareTracker:ColorText(L["wow_rare_tracker"] .. ": ", WRT.colors.yellow) .. WoWRareTracker:GetStatusText(npcid))
             if rare.itemID ~= 0 then
                 local itemName, itemLink, itemRarity, _, _, itemType, _, _, _, _, _ = GetItemInfo(rare.itemID)
                 if itemLink or itemName then
-                    GameTooltip:AddLine(WoWRareTracker:ColorText(L["wrt_tooltip_drop"]" " .. rare.drop .. ": ", WRT.colors.yellow) .. (itemLink or itemName))
+                    GameTooltip:AddLine(WoWRareTracker:ColorText(L["wrt_tooltip_drop"] .. " " .. rare.drop .. ": ", WRT.colors.yellow) .. (itemLink or itemName))
                 end
             end
         end
