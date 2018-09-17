@@ -1,0 +1,26 @@
+## Interface: 80000
+## Title: WoW Rare Tracker
+## Version: 0.1
+## Notes: Track your char's rare kills by its QuestID. Currently working for Arathi Rares (more coming soon).
+## Author: Lahmizzar
+## Credits: Based on NPCScan, RareScanner and Arathi Rare Tracker
+## SavedVariables: WoWRareTrackerDB
+
+# Library files
+#@no-lib-strip@
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libs\AceAddon-3.0\AceAddon-3.0.xml
+Libs\AceEvent-3.0\AceEvent-3.0.xml
+Libs\AceDB-3.0\AceDB-3.0.xml
+Libs\AceConsole-3.0\AceConsole-3.0.xml
+Libs\AceGUI-3.0\AceGUI-3.0.xml
+Libs\AceConfig-3.0\AceConfig-3.0.xml
+Libs\AceTimer-3.0\AceTimer-3.0.xml
+Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
+Libs\LibQTip-1.0\LibQTip-1.0.lua
+#@end-no-lib-strip@
+
+# Core files
+WoWRareTracker.lua
