@@ -1,6 +1,6 @@
 ## Interface: 80000
 ## Title:|cffc200ffWoW Rare Tracker|r |cffefefefCore|r
-## Version: 0.2.0
+## Version: 0.2.1
 ## Notes: Track your char's rare kills by its QuestID. Currently working for BfA Arathi Rares (more coming soon).
 ## Author: Lahmizzar
 ## Credits: Based on NPCScan, RareScanner and Arathi Rare Tracker

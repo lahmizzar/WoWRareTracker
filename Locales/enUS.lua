@@ -6,7 +6,7 @@ L["string1"] = true
 
 --Config
 L["wow_rare_tracker"] = "WoW Rare Tracker"
-L["minimap_and_broker"] = "Minimap & Data Broker"
+L["minimap_broker"] = "Minimap & Data Broker"
 L["show_minimap_icon_name"] = "Show Minimap Icon"
 L["show_minimap_icon_desc"] = "Shows Minimap Icon"
 L["show_broker_text_name"] = "Show Broker Text"
