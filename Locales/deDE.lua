@@ -60,7 +60,7 @@ L["tomtom_added_waypoint_to"] = "WRT => Wegpunkt hinzugefügt zu: "
 L["wrt_tooltip_drop"] = "Drop"
 
 --Rares
-L["rare_dooms_howl"] = format("(|cFFffaa00%s|r) Die Heulende Verdammnis", "??+")
+L["rare_dooms_howl"] = "(??) Die Heulende Verdammnis"
 L["rare_the_lions_roar"] = "(??+) Der Brüllende Löwe"
 L["rare_cresting_goliath"] = "(122) Überschäumender Goliath"
 L["rare_burning_goliath"] = "(122) Brennender Goliath"
