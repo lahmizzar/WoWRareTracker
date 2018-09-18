@@ -12,7 +12,7 @@ local _G = _G
 WoWRareTracker.WRT = {}
 local WRT = WoWRareTracker.WRT
 
-WRT.version = "0.3.0"
+WRT.version = "0.3.1"
 
 WRT.rares = {
     [138122] = { name = L["rare_dooms_howl"], 				lvl = "??+",	id = 138122, questId = { 53002 }, 			type = "WorldBoss", 	drop = "Toy", 		itemID = 163828, 	faction = "alliance", 	coord = 37093921,					sort = 1,	isKnown = false },
@@ -540,8 +540,8 @@ function WoWRareTracker:UpdateToolTip(tooltip)
     line = tooltip:AddHeader()
     line = tooltip:SetCell(line, 1, L["wrt_table_1"])
 	-- line = tooltip:SetCell(line, sortNumber, cellName, nil, allign, 1, LibQTip.LabelProvider, marginLeft, nil, maxWidth, minWidth)
-	line = tooltip:SetCell(line, 2, L["wrt_table_2"], nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 60, 100)
-    line = tooltip:SetCell(line, 3, L["wrt_table_3"], nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 60, 100)
+	line = tooltip:SetCell(line, 2, L["wrt_table_2"], nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 100, 60)
+    line = tooltip:SetCell(line, 3, L["wrt_table_3"], nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 100, 60)
     line = tooltip:SetCell(line, 4, L["wrt_table_4"])
     tooltip:AddSeparator()
 
@@ -558,8 +558,8 @@ function WoWRareTracker:UpdateToolTip(tooltip)
 
             line = tooltip:AddLine()
             line = tooltip:SetCell(line, 1, name)
-            line = tooltip:SetCell(line, 2, lvl, nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 60, 100)
-            line = tooltip:SetCell(line, 3, drop, nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 60, 100)
+            line = tooltip:SetCell(line, 2, lvl, nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 100, 60)
+            line = tooltip:SetCell(line, 3, drop, nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 100, 60)
             line = tooltip:SetCell(line, 4, status)
             tooltip:SetLineScript(line, "OnEnter", function(self, npcid) WoWRareTracker:ShowExtraTooltip(self, npcid) end, npcid)
             tooltip:SetLineScript(line, "OnLeave", function() WoWRareTracker:HideExtraTooltip() end)
