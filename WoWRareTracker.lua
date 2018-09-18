@@ -12,40 +12,40 @@ local _G = _G
 WoWRareTracker.WRT = {}
 local WRT = WoWRareTracker.WRT
 
-WRT.version = "0.2.1"
+WRT.version = "0.3.0"
 
 WRT.rares = {
-    [138122] = { name = L["rare_dooms_howl"], id = 138122, questId = { 53002 }, type = "WorldBoss", drop = "Toy", itemID = 163828, faction = "alliance", coord = 37093921, sort = 1, isKnown = false },
-    [137374] = { name = L["rare_the_lions_roar"], id = 137374, questId = { 0 }, type = "WorldBoss", drop = "Toy", itemID = 163829, faction = "horde", coord = 30155960, sort = 2, isKnown = false }, -- Need Horde Quest ID
-    [141618] = { name = L["rare_cresting_goliath"], id = 141618, questId = { 53018, 53531 }, type = "Elite", drop = "Item", itemID = 163700, faction = "all", coord = 62513084, sort = 3, isKnown = false },
-    [141615] = { name = L["rare_burning_goliath"], id = 141615, questId = { 53017, 53506 }, type = "Elite", drop = "Item", itemID = 163691, faction = "all", coord = 30604475, sort = 4, isKnown = false },
-    [141620] = { name = L["rare_rumbling_goliath"], id = 141620, questId = { 53021, 53523 }, type = "Elite", drop = "Item", itemID = 163701, faction = "all", coord = 29405834, sort = 5, isKnown = false },
-    [141616] = { name = L["rare_thundering_goliath"], id = 141616, questId = { 53023, 53527 }, type = "Elite", drop = "Item", itemID = 163698, faction = "all", coord = 46245222, sort = 6, isKnown = false },
-    [142709] = { name = L["rare_beastrider_kama"], id = 142709, questId = { 53083, 53504 }, type = "Rare", drop = "Mount", itemID = 163644, mountID = 1180, faction = "all", coord = 65347116, sort = 7, isKnown = false },
-    [142692] = { name = L["rare_nimar_the_slayer"], id = 142692, questId = { 53091, 53517 }, type = "Rare", drop = "Mount", itemID = 163706, mountID = 1185, faction = "all", coord = 67486058, sort = 8, isKnown = false },
-    [142423] = { name = L["rare_overseer_krix"], id = 142423, questId = { 53014, 53518 }, type = "Rare", drop = "Mount", itemID = 163646, mountID = 1182, faction = "all", coord = 33693676, sort = 9, isKnown = false },
-    [142437] = { name = L["rare_skullripper"], id = 142437, questId = { 53022, 53526 }, type = "Rare", drop = "Mount", itemID = 163645, mountID = 1183, faction = "all", coord = 57154575, sort = 10, isKnown = false },
-    [142739] = { name = L["rare_knight_captain_aldrin"], id = 142739, questId = { 0 }, type = "Rare", drop = "Mount", itemID = 163578, mountID = 1173, faction = "horde", coord = 49274005, sort = 11, isKnown = false }, -- Need Horde Quest ID
-    [142741] = { name = L["rare_doomrider_helgrim"], id = 142741, questId = { 53085 }, type = "Rare", drop = "Mount", itemID = 163579, mountID = 1174, faction = "alliance", coord = 53565764, sort = 12, isKnown = false },
-    [142508] = { name = L["rare_branchlord_aldrus"], id = 142508, questId = { 53013, 53505 }, type = "Rare", drop = "Pet", itemID = 143503, petID = 143503, faction = "all", coord = 21752217, sort = 13, isKnown = false },
-    [142688] = { name = L["rare_darbel_montrose"], id = 142688, questId = { 53084, 53507 }, type = "Rare", drop = "Pet", itemID = 163652, petID = 143507, faction = "all", coord = 50673675, sort = 14, isKnown = false },
-    [141668] = { name = L["rare_echo_of_myzrael"], id = 141668, questId = { 53059, 53508 }, type = "Rare", drop = "Pet", itemID = 163677, petID = 143515, faction = "all", coord = 57073506, sort = 15, isKnown = false },
-    [142433] = { name = L["rare_fozruk"], id = 142433, questId = { 53019 }, type = "Rare", drop = "Pet", itemID = 163711, petID = 143627, faction = "all", coord = 59422773, sort = 16, isKnown = false }, -- Need Horde Quest ID
-    [142716] = { name = L["rare_man_hunter_rog"], id = 142716, questId = { 53090, 53515 }, type = "Rare", drop = "Pet", itemID = 143628, petID = 143628, faction = "all", coord = 51827562, sort = 17, isKnown = false },
-    [142435] = { name = L["rare_plaguefeather"], id = 142435, questId = { 53020, 53519 }, type = "Rare", drop = "Pet", itemID = 163690, petID = 143564, faction = "all", coord = 35606435, sort = 18, isKnown = false },
-    [142436] = { name = L["rare_ragebeak"], id = 142436, questId = { 53016, 53522 }, type = "Rare", drop = "Pet", itemID = 163689, petID = 143563, faction = "all", coord = 18412794, sort = 19, isKnown = false },
-    [142438] = { name = L["rare_venomarus"], id = 142438, questId = { 53024, 53528 }, type = "Rare", drop = "Pet", itemID = 163648, petID = 143499, faction = "all", coord = 56945330, sort = 20, isKnown = false },
-    [142440] = { name = L["rare_yogursa"], id = 142440, questId = { 53015, 53529 }, type = "Rare", drop = "Pet", itemID = 163684, petID = 143533, faction = "all", coord = 13273534, sort = 21, isKnown = false },
-    [142686] = { name = L["rare_foulbelly"], id = 142686, questId = { 53086, 53509 }, type = "Rare", drop = "Toy", itemID = 163735, faction = "all", coord = 22305106, sort = 22, isKnown = false },
-    [142662] = { name = L["rare_geomancer_flintdagger"], id = 142662, questId = { 53060, 53511 }, type = "Rare", drop = "Toy", itemID = 163713, faction = "all", coord = 78153687, sort = 23, isKnown = false },
-    [142725] = { name = L["rare_horrific_apparition"], id = 142725, questId = { 53087, 53512 }, type = "Rare", drop = "Toy", itemID = 163736, faction = "all", coord = 26723278, sort = 24, isKnown = false },
-    [142112] = { name = L["rare_korgresh_coldrage"], id = 142112, questId = { 53058, 53513 }, type = "Rare", drop = "Toy", itemID = 163744, faction = "all", coord = 49318426, sort = 25, isKnown = false },
-    [142684] = { name = L["rare_kovork"], id = 142684, questId = { 53089, 53514 }, type = "Rare", drop = "Toy", itemID = 163750, faction = "all", coord = 25294856, sort = 26, isKnown = false },
-    [141942] = { name = L["rare_molok_the_crusher"], id = 141942, questId = { 53057, 53516 }, type = "Rare", drop = "Toy", itemID = 163775, faction = "all", coord = 47657800, sort = 27, isKnown = false },
-    [142683] = { name = L["rare_ruul_onestone"], id = 142683, questId = { 53092, 53524 }, type = "Rare", drop = "Toy", itemID = 163741, faction = "all", coord = 42905660, sort = 28, isKnown = false },
-    [142690] = { name = L["rare_singer"], id = 142690, questId = { 53093, 53525 }, type = "Rare", drop = "Toy", itemID = 163738, faction = "all", coord = 51213999, sort = 29, isKnown = false },
-    [142682] = { name = L["rare_zalas_witherbark"], id = 142682, questId = { 53094, 53530 }, type = "Rare", drop = "Toy", itemID = 163745, faction = "all", coord = 62858120, sort = 30, isKnown = false },
-    [141947] = { name = L["rare_boulderfist_brute"], id = 141947, questId = { 0 }, type = "Rare", drop = "Nothing", itemID = 0, faction = "all", sort = 31 },
+    [138122] = { name = L["rare_dooms_howl"], 				lvl = "??+",	id = 138122, questId = { 53002 }, 			type = "WorldBoss", 	drop = "Toy", 		itemID = 163828, 	faction = "alliance", 	coord = 37093921,					sort = 1,	isKnown = false },
+    [137374] = { name = L["rare_the_lions_roar"], 			lvl = "??+",	id = 137374, questId = { 0 }, 				type = "WorldBoss", 	drop = "Toy", 		itemID = 163829, 	faction = "horde", 		coord = 30155960,					sort = 2,	isKnown = false }, -- Need Horde Quest ID
+    [141618] = { name = L["rare_cresting_goliath"], 		lvl = "122",	id = 141618, questId = { 53018, 53531 }, 	type = "Elite", 		drop = "Item", 		itemID = 163700, 	faction = "all", 		coord = 62513084,					sort = 3,	isKnown = false },
+    [141615] = { name = L["rare_burning_goliath"], 			lvl = "0",	id = 141615, questId = { 53017, 53506 }, 	type = "Elite", 		drop = "Item", 		itemID = 163691, 	faction = "all", 		coord = 30604475,					sort = 4,	isKnown = false },
+    [141620] = { name = L["rare_rumbling_goliath"], 		lvl = "122",	id = 141620, questId = { 53021, 53523 }, 	type = "Elite", 		drop = "Item", 		itemID = 163701, 	faction = "all", 		coord = 29405834,					sort = 5,	isKnown = false },
+    [141616] = { name = L["rare_thundering_goliath"], 		lvl = "122",	id = 141616, questId = { 53023, 53527 }, 	type = "Elite", 		drop = "Item", 		itemID = 163698, 	faction = "all", 		coord = 46245222,					sort = 6,	isKnown = false },
+    [142709] = { name = L["rare_beastrider_kama"], 			lvl = "121",	id = 142709, questId = { 53083, 53504 }, 	type = "Rare", 			drop = "Mount", 	itemID = 163644, 	faction = "all",		coord = 65347116,	mountID = 1180, sort = 7,	isKnown = false },
+    [142692] = { name = L["rare_nimar_the_slayer"], 		lvl = "121",	id = 142692, questId = { 53091, 53517 }, 	type = "Rare", 			drop = "Mount", 	itemID = 163706, 	faction = "all", 		coord = 67486058,	mountID = 1185,	sort = 8,	isKnown = false },
+    [142423] = { name = L["rare_overseer_krix"], 			lvl = "122",	id = 142423, questId = { 53014, 53518 }, 	type = "Rare", 			drop = "Mount", 	itemID = 163646, 	faction = "all",		coord = 33693676,	mountID = 1182,	sort = 9,	isKnown = false },
+    [142437] = { name = L["rare_skullripper"], 				lvl = "122",	id = 142437, questId = { 53022, 53526 }, 	type = "Rare", 			drop = "Mount", 	itemID = 163645, 	faction = "all",		coord = 57154575,	mountID = 1183,	sort = 10,	isKnown = false },
+    [142739] = { name = L["rare_knight_captain_aldrin"],	lvl = "0",	id = 142739, questId = { 0 }, 				type = "Rare", 			drop = "Mount", 	itemID = 163578, 	faction = "horde", 		coord = 49274005,	mountID = 1173,	sort = 11,	isKnown = false }, -- Need Horde Quest ID
+    [142741] = { name = L["rare_doomrider_helgrim"], 		lvl = "0",	id = 142741, questId = { 53085 }, 			type = "Rare", 			drop = "Mount", 	itemID = 163579, 	faction = "alliance",	coord = 53565764,	mountID = 1174,	sort = 12,	isKnown = false },
+    [142508] = { name = L["rare_branchlord_aldrus"], 		lvl = "122",	id = 142508, questId = { 53013, 53505 }, 	type = "Rare", 			drop = "Pet", 		itemID = 143503, 	faction = "all", 		coord = 21752217, 	petID = 143503,	sort = 13,	isKnown = false },
+    [142688] = { name = L["rare_darbel_montrose"], 			lvl = "121",	id = 142688, questId = { 53084, 53507 }, 	type = "Rare", 			drop = "Pet", 		itemID = 163652, 	faction = "all", 		coord = 50673675, 	petID = 143507,	sort = 14,	isKnown = false },
+    [141668] = { name = L["rare_echo_of_myzrael"], 			lvl = "122",	id = 141668, questId = { 53059, 53508 }, 	type = "Rare", 			drop = "Pet", 		itemID = 163677, 	faction = "all",		coord = 57073506,   petID = 143515, sort = 15,	isKnown = false },
+    [142433] = { name = L["rare_fozruk"], 					lvl = "122",	id = 142433, questId = { 53019 }, 			type = "Rare", 			drop = "Pet", 		itemID = 163711, 	faction = "all", 		coord = 59422773,	petID = 143627, sort = 16,	isKnown = false }, -- Need Horde Quest ID
+    [142716] = { name = L["rare_man_hunter_rog"], 			lvl = "122",	id = 142716, questId = { 53090, 53515 }, 	type = "Rare", 			drop = "Pet", 		itemID = 143628, 	faction = "all",		coord = 51827562,	petID = 143628, sort = 17,	isKnown = false },
+    [142435] = { name = L["rare_plaguefeather"], 			lvl = "122",	id = 142435, questId = { 53020, 53519 }, 	type = "Rare", 			drop = "Pet", 		itemID = 163690, 	faction = "all", 		coord = 35606435,	petID = 143564, sort = 18,	isKnown = false },
+    [142436] = { name = L["rare_ragebeak"], 				lvl = "122",	id = 142436, questId = { 53016, 53522 }, 	type = "Rare", 			drop = "Pet", 		itemID = 163689, 	faction = "all", 		coord = 18412794,	petID = 143563, sort = 19,	isKnown = false },
+    [142438] = { name = L["rare_venomarus"], 				lvl = "122",	id = 142438, questId = { 53024, 53528 }, 	type = "Rare", 			drop = "Pet", 		itemID = 163648, 	faction = "all", 		coord = 56945330,	petID = 143499, sort = 20,	isKnown = false },
+    [142440] = { name = L["rare_yogursa"], 					lvl = "122",	id = 142440, questId = { 53015, 53529 }, 	type = "Rare", 			drop = "Pet", 		itemID = 163684, 	faction = "all", 		coord = 13273534,	petID = 143533, sort = 21,	isKnown = false },
+    [142686] = { name = L["rare_foulbelly"], 				lvl = "121",	id = 142686, questId = { 53086, 53509 }, 	type = "Rare", 			drop = "Toy", 		itemID = 163735, 	faction = "all", 		coord = 22305106,					sort = 22,	isKnown = false },
+    [142662] = { name = L["rare_geomancer_flintdagger"], 	lvl = "121",	id = 142662, questId = { 53060, 53511 }, 	type = "Rare", 			drop = "Toy", 		itemID = 163713, 	faction = "all", 		coord = 78153687,					sort = 23,	isKnown = false },
+    [142725] = { name = L["rare_horrific_apparition"], 		lvl = "121",	id = 142725, questId = { 53087, 53512 }, 	type = "Rare", 			drop = "Toy", 		itemID = 163736, 	faction = "all", 		coord = 26723278,					sort = 24,	isKnown = false },
+    [142112] = { name = L["rare_korgresh_coldrage"], 		lvl = "121",	id = 142112, questId = { 53058, 53513 }, 	type = "Rare", 			drop = "Toy", 		itemID = 163744, 	faction = "all", 		coord = 49318426,					sort = 25,	isKnown = false },
+    [142684] = { name = L["rare_kovork"], 					lvl = "121",	id = 142684, questId = { 53089, 53514 }, 	type = "Rare", 			drop = "Toy", 		itemID = 163750, 	faction = "all", 		coord = 25294856,					sort = 26,	isKnown = false },
+    [141942] = { name = L["rare_molok_the_crusher"], 		lvl = "122",	id = 141942, questId = { 53057, 53516 }, 	type = "Rare", 			drop = "Toy", 		itemID = 163775, 	faction = "all", 		coord = 47657800,					sort = 27,	isKnown = false },
+    [142683] = { name = L["rare_ruul_onestone"], 			lvl = "121",	id = 142683, questId = { 53092, 53524 }, 	type = "Rare", 			drop = "Toy", 		itemID = 163741, 	faction = "all", 		coord = 42905660,					sort = 28,	isKnown = false },
+    [142690] = { name = L["rare_singer"], 					lvl = "121",	id = 142690, questId = { 53093, 53525 }, 	type = "Rare", 			drop = "Toy", 		itemID = 163738, 	faction = "all", 		coord = 51213999,					sort = 29,	isKnown = false },
+    [142682] = { name = L["rare_zalas_witherbark"], 		lvl = "121",	id = 142682, questId = { 53094, 53530 }, 	type = "Rare", 			drop = "Toy", 		itemID = 163745, 	faction = "all", 		coord = 62858120,					sort = 30,	isKnown = false },
+    [141947] = { name = L["rare_boulderfist_brute"], 		lvl = "121",	id = 141947, questId = { 0 }, 				type = "Rare", 			drop = "Nothing", 	itemID = 0, 		faction = "all",											sort = 31					},
 }
 
 WRT.isTomTomloaded = false
@@ -451,6 +451,15 @@ function WoWRareTracker:GetStatusText(npcid)
     return WoWRareTracker:ColorText(L["wrt_available"], WRT.db.profile.colorizeStatus.enabled and WRT.db.profile.colorizeStatus.available or WRT.colors.green)
 end
 
+function WoWRareTracker:GetLvlText(npcid)
+    local rare = WRT.rares[npcid]
+    if rare.lvl == "0" then
+        return WoWRareTracker:ColorText(L["wrt_unknown"], WRT.colors.yellow)
+    else
+		return rare.lvl
+    end
+end
+
 function WoWRareTracker:GetDropText(npcid)
     local rare = WRT.rares[npcid]
     if WRT.db.profile.colorizeDrops.enabled and rare.isKnown then
@@ -521,7 +530,7 @@ function WoWRareTracker:UpdateToolTip(tooltip)
     local line
 
     tooltip:Clear();
-    tooltip:SetColumnLayout(3, "LEFT", "LEFT", "LEFT")
+    tooltip:SetColumnLayout(4, "LEFT", "LEFT", "LEFT", "LEFT")
 
     line = tooltip:AddHeader()
     tooltip:SetCell(line, 1, WoWRareTracker:ColorText(L["wow_rare_tracker"], WRT.colors.yellow), tooltip:GetHeaderFont(), "CENTER", 3)
@@ -530,8 +539,10 @@ function WoWRareTracker:UpdateToolTip(tooltip)
 
     line = tooltip:AddHeader()
     line = tooltip:SetCell(line, 1, L["wrt_table_1"])
-    line = tooltip:SetCell(line, 2, L["wrt_table_2"], nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 100, 100)
-    line = tooltip:SetCell(line, 3, L["wrt_table_3"])
+	-- line = tooltip:SetCell(line, sortNumber, cellName, nil, allign, 1, LibQTip.LabelProvider, marginLeft, nil, maxWidth, minWidth)
+	line = tooltip:SetCell(line, 2, L["wrt_table_2"], nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 60, 100)
+    line = tooltip:SetCell(line, 3, L["wrt_table_3"], nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 60, 100)
+    line = tooltip:SetCell(line, 4, L["wrt_table_4"])
     tooltip:AddSeparator()
 
     for k, value in pairs(sortRares(WRT.rares)) do
@@ -541,13 +552,15 @@ function WoWRareTracker:UpdateToolTip(tooltip)
             if value.type == "WorldBoss" then
                 name = WoWRareTracker:ColorText(name, WRT.colors.purple)
             end
+			local lvl = WoWRareTracker:GetLvlText(npcid)
             local drop = WoWRareTracker:GetDropText(npcid)
             local status = WoWRareTracker:GetStatusText(npcid)
 
             line = tooltip:AddLine()
             line = tooltip:SetCell(line, 1, name)
-            line = tooltip:SetCell(line, 2, drop, nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 100, 100)
-            line = tooltip:SetCell(line, 3, status)
+            line = tooltip:SetCell(line, 2, lvl, nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 60, 100)
+            line = tooltip:SetCell(line, 3, drop, nil, "LEFT", 1, LibQTip.LabelProvider, 20, nil, 60, 100)
+            line = tooltip:SetCell(line, 4, status)
             tooltip:SetLineScript(line, "OnEnter", function(self, npcid) WoWRareTracker:ShowExtraTooltip(self, npcid) end, npcid)
             tooltip:SetLineScript(line, "OnLeave", function() WoWRareTracker:HideExtraTooltip() end)
             tooltip:SetLineScript(line, "OnMouseUp", function(self, npcid, button) WoWRareTracker:TooltipLineOnClick(self, npcid, button) end, npcid)

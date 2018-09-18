@@ -44,7 +44,8 @@ L["reset_to_default_print"] = "Settings reset to Default."
 
 -- Addon Menu
 L["wrt_table_1"] = "Rare"
-L["wrt_table_2"] = "Drop"
+L["wrt_table_2"] = "Level"
+L["wrt_table_3"] = "Drop"
 L["wrt_table_3"] = "Status"
 L["wrt_unknown"] = "Unknown"
 L["wrt_defeated"] = "Defeated"
