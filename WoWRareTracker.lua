@@ -12,7 +12,7 @@ local _G = _G
 WoWRareTracker.WRT = {}
 local WRT = WoWRareTracker.WRT
 
-WRT.version = "0.3.3"
+WRT.version = "0.4.0"
 
 -- alliance portal exist in Boralus or dooms_howl is active
 -- horde, if portal exist in Daza Alor or lions_roar is active
