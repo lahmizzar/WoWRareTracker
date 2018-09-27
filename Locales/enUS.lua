@@ -5,7 +5,7 @@ local L = LibStub("AceLocale-3.0"):NewLocale("WoWRareTracker", "enUS", true)
 L["string1"] = true
 
 --Config
-L["wow_rare_tracker"] = "WoW Rare Tracker"
+L["wow_rare_tracker"] = "BfA Rare Tracker"
 L["wow_rare_tracker_controlled_by"] = "Arathi Highlands controlled by the"
 L["wow_rare_tracker_controlled_by_horde"] = "Horde"
 L["wow_rare_tracker_controlled_by_alliance"] = "Alliance"

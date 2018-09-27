@@ -6,7 +6,7 @@ if not L then return end
 L["string1"] = "Zeichenkette1"
 
 --Config
-L["wow_rare_tracker"] = "WoW Rare Tracker"
+L["wow_rare_tracker"] = "BfA Rare Tracker"
 L["wow_rare_tracker_controlled_by"] = "Arathihichland wird kontrolliert durch die"
 L["wow_rare_tracker_controlled_by_horde"] = "Horde"
 L["wow_rare_tracker_controlled_by_alliance"] = "Allianz"

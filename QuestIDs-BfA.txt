@@ -1,0 +1,29 @@
+Arathi Quests
+=================================
+Doppelt verbannt hält besser 	= 53193
+Exorzismus durchführen			= 53190
+Der Bund wird verlieren			= 53154
+Faust um Faust 					= 53148
+Die Sünden des Syndikats 		= 53173
+Bleichborgen beseitigen 		= 53150
+
+
+BfA Rares und deren QuestID's
+=============================
+Dschungelnetzjager = 51074
+Mordobello = N/A
+
+
+
+
+BfA Arathi Rares und deren QuestID's
+====================================
+Donnernder Goliath = 53527
+Kovork						= 53514
+Falbauch 					= 53509
+Schreckliche Erscheinung	= 53512
+
+
+BfA WorldBoss/WorldQuest QuestID's
+==================================
+KnochenImSand 				= 52196

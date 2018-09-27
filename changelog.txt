@@ -1,0 +1,12 @@
+-------------
+-- CHANGELOG
+-------------
+
+v0.5.0-beta
+- Changed addon name to a more intuitive name => BfA Rare Tracker (but its still in wowraretracker folder)
+- Removed custom color option, now default colors are shown
+- Changed commands in /raretracker and /bfararetracker
+- Code prepared for changes in 0.6.0-beta
+
+v0.4.1-beta
+- minor bugfixes
